@@ -1,0 +1,13 @@
+# Extra dependencies needed only for running/retraining the notebooks
+# (in addition to the backend requirements.txt in the project root)
+jupyter
+nbconvert
+matplotlib
+seaborn
+scipy
+xgboost
+lightgbm
+shap
+prophet
+optuna
+mlflow

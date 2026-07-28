@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://https://sunny-listprice-traveler-executives.trycloudflare.com";
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://sleep-wrote-reserve-groundwater.trycloudflare.com";
 
 const client = axios.create({
   baseURL: API_BASE_URL,
@@ -10,9 +12,11 @@ const client = axios.create({
 // Attach the JWT token (if present) to every outgoing request
 client.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
+
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
+
   return config;
 });
 
@@ -24,6 +28,7 @@ client.interceptors.response.use(
       localStorage.removeItem("token");
       localStorage.removeItem("user");
     }
+
     return Promise.reject(error);
   }
 );
@@ -34,12 +39,21 @@ export async function checkHealth() {
 }
 
 export async function registerUser({ username, email, password }) {
-  const { data } = await client.post("/api/auth/register", { username, email, password });
+  const { data } = await client.post("/api/auth/register", {
+    username,
+    email,
+    password,
+  });
+
   return data;
 }
 
 export async function loginUser({ email, password }) {
-  const { data } = await client.post("/api/auth/login", { email, password });
+  const { data } = await client.post("/api/auth/login", {
+    email,
+    password,
+  });
+
   return data;
 }
 

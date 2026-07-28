@@ -1,9 +1,9 @@
 import pandas as pd
 from flask import Blueprint, jsonify, request
 
-from utils.auth_middleware import token_required
-from utils.model_loader import fertilizer_model, fertilizer_label_encoder
-from utils.explain import explain_fertilizer_prediction
+from app_utils.auth_middleware import token_required
+from app_utils.model_loader import fertilizer_model, fertilizer_label_encoder
+from app_utils.explain import explain_fertilizer_prediction
 
 fertilizer_bp = Blueprint("fertilizer", __name__)
 

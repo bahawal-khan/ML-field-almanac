@@ -1,8 +1,8 @@
 from flask import Blueprint, jsonify, request
 
-from utils.auth_middleware import token_required
-from utils.model_loader import crop_model, crop_label_encoder
-from utils.explain import explain_crop_prediction
+from app_utils.auth_middleware import token_required
+from app_utils.model_loader import crop_model, crop_label_encoder
+from app_utils.explain import explain_crop_prediction
 
 crop_bp = Blueprint("crop", __name__)
 
@@ -119,7 +119,7 @@ def predict_crop_regional(current_user):
     district-level data (13 locally-grown crops instead of the main
     model's 22 global crops). See notebooks/04_Regional_Crop_Model_Pakistan.ipynb.
     """
-    from utils.model_loader import regional_crop_model, regional_crop_label_encoder
+    from app_utils.model_loader import regional_crop_model, regional_crop_label_encoder
 
     data = request.get_json(silent=True)
     if data is None:

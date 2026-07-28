@@ -5,8 +5,8 @@ from datetime import datetime, timedelta
 
 from app_config import Config
 from db import db
-from models.user import User
-from utils.auth_middleware import token_required
+from app_models.user import User
+from app_utils.auth_middleware import token_required
 
 auth_bp = Blueprint("auth", __name__)
 

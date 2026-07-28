@@ -2,8 +2,8 @@ from flask import Flask
 from flask_cors import CORS
 from app_config import Config
 from db import db
-from models import *
-from routes import auth_bp, crop_bp, fertilizer_bp
+from app_models import *
+from app_routes import auth_bp, crop_bp, fertilizer_bp
 
 app = Flask(__name__)
 

@@ -306,14 +306,14 @@ python src/init_db.py             # ⭐ creates all tables — run once
 python -m flask --app src/app run --port 5000
 ```
 
-- Health check: http://localhost:5000/api/health
+- Health check: http://https://sunny-listprice-traveler-executives.trycloudflare.com/api/health
 
 ### 3. Frontend (React + Vite)
 
 ```bash
 cd frontend
 npm install
-cp .env.example .env      # set VITE_API_URL if backend isn't on localhost:5000
+cp .env.example .env      # set VITE_API_URL if backend isn't on https://sunny-listprice-traveler-executives.trycloudflare.com
 npm run dev
 ```
 

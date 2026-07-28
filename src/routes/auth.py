@@ -3,8 +3,8 @@ import bcrypt
 import jwt
 from datetime import datetime, timedelta
 
-from config import Config
-from database import db
+from app_config import Config
+from db import db
 from models.user import User
 from utils.auth_middleware import token_required
 

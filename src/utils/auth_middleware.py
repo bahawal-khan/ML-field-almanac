@@ -2,7 +2,7 @@ from functools import wraps
 from flask import request, jsonify
 import jwt
 
-from config import Config
+from app_config import Config
 from models.user import User
 
 

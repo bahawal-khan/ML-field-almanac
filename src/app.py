@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
-from config import Config
-from database import db
+from app_config import Config
+from db import db
 from models import *
 from routes import auth_bp, crop_bp, fertilizer_bp
 

@@ -1,4 +1,4 @@
-from database import db
+from db import db
 
 
 class Fertilizer(db.Model):
